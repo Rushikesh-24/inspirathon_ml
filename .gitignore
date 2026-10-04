@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and outputs
+data/
+outputs/
+outputs_submission/
+outputs_v2/
+outputs_v3/
+outputs_v4/
+cache/
+
+# Catboost logs
+catboost_info/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebooks (optional)
+.ipynb_checkpoints
