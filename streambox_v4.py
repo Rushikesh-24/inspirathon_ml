@@ -628,7 +628,7 @@ def main():
     print(f"   XGBoost:  rolling={oof_xgb['mean']:.5f}")
 
     # Build OOF frame
-    base = pd.concat(oof_cb["oof"])[["row_id", "fold", "y"]].copy()
+    base = pd.concat(oof_cb["oof"])[["row_id", "fold", "y"]].copy().reset_index(drop=True)
     base["cb"]  = pd.concat(oof_cb["oof"])["pred"].values
     base["lgb"] = pd.concat(oof_lgb["oof"])["pred"].values
     base["xgb"] = pd.concat(oof_xgb["oof"])["pred"].values
